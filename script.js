@@ -86,13 +86,16 @@ function createEventRow(event, index, type) {
         <td>${new Date(event.end).toLocaleString()}</td>
         <td>${event.description}</td>
         <td>
-            ${type === 'upcoming' ? `<button class="complete-button" onclick="markCompleted(${event.id})">Mark Completed</button>` : `<button class="upcoming-button" onclick="markUpcoming(${event.id})">Mark Upcoming</button>`}
+            ${type !== 'search' ? `
+                ${type === 'upcoming' ? `<button class="complete-button" onclick="markCompleted(${event.id})">Mark Completed</button>` : `<button class="upcoming-button" onclick="markUpcoming(${event.id})">Mark Upcoming</button>`}
+            ` : ''}
             <button class="edit-button" onclick="editEvent(${event.id})">Edit</button>
             <button onclick="deleteEvent(${event.id})">Delete</button>
         </td>
     `;
     return row;
 }
+
 
 
 function deleteEvent(id) {
