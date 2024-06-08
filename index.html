@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collabyte Event Management System</title>
+    <title>Collabyte Events</title>
      <link rel="stylesheet" href="styles.css">
      <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -23,16 +23,20 @@
 
     <!-- Main content (hidden by default) -->
     <div class="main-content" style="display: none;">
+        
         <div class="container">
-            <h1>Collabyte Event Management System</h1>
+            <img src="logo.png" alt="Logo" width="300" style="display: block; margin-left: auto; margin-right: auto;">
+
+            <h1>Events</h1>
+            
             <div class="menu">
                 <button id="upcomingEventsBtn">Upcoming Events</button>
                 <button id="completedEventsBtn">Completed Events</button>
                 <button id="addEventBtn">Add Event</button>
             </div>
             <div class="stats">
-                <div id="totalCompleted">Total Completed Events: 0</div>
                 <div id="totalPending">Total Pending Events: 0</div>
+                <div id="totalCompleted">Total Completed Events: 0</div>
             </div>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search Events...">

@@ -68,13 +68,13 @@ body {
         }
 
         .login-container button:hover {
-            background-color: #0056b3;
+            background-color: #2d4c6a;
         }
 
 /* Heading Styles */
 h1, h2 {
     text-align: center;
-    color: #007bff;
+    color: #2C3E50;
 }
 
 /* Menu Styles */
@@ -89,7 +89,7 @@ h1, h2 {
     margin: 0 10px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #2C3E50;
     color: white;
     cursor: pointer;
     font-size: 16px;
@@ -97,7 +97,7 @@ h1, h2 {
 }
 
 .menu button:hover {
-    background-color: #0056b3;
+    background-color: #2d4c6a;
 }
 
 /* Stats Styles */
@@ -133,7 +133,7 @@ h1, h2 {
     padding: 10px 20px;
     border: none;
     border-radius: 0 5px 5px 0;
-    background-color: #007bff;
+    background-color: #2C3E50;
     color: white;
     cursor: pointer;
     font-size: 16px;
@@ -141,7 +141,7 @@ h1, h2 {
 }
 
 .search-container button:hover {
-    background-color: #0056b3;
+    background-color: #2d4c6a;
 }
 
 /* Input Container Styles */
@@ -163,7 +163,7 @@ h1, h2 {
     padding: 15px;
     border: none;
     border-radius: 10px;
-    background-color: #007bff;
+    background-color: #2C3E50;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -171,7 +171,7 @@ h1, h2 {
 }
 
 .input-container button:hover {
-    background-color: #0056b3;
+    background-color: #2d4c6a;
 }
 
 /* Events Container Styles */
@@ -192,7 +192,7 @@ h1, h2 {
 }
 
 #eventsTable th {
-    background-color: #007bff;
+    background-color: #2C3E50;
     color: white;
 }
 
@@ -216,12 +216,12 @@ h1, h2 {
 
 /* Edit Button Styles */
 #eventsTable td .edit-button {
-    background-color: #007bff;
+    background-color: #0078D7;
     margin-right: 5px;
 }
 
 #eventsTable td .edit-button:hover {
-    background-color: #0056b3;
+    background-color: #105d9b;
 }
 
 /* Complete Button Styles */
