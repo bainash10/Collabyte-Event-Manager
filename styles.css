@@ -19,7 +19,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 900px;
-    overflow: hidden;
+    overflow-y: auto; /* Add vertical scrolling if necessary */
+    max-height: 90vh; /* Restrict the height */
 }
 
 /* Heading Styles */
