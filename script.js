@@ -94,6 +94,7 @@ function createEventRow(event, index, type) {
     return row;
 }
 
+
 function deleteEvent(id) {
     if (confirm("Are you sure you want to delete this event?")) {
         const events = JSON.parse(localStorage.getItem('events')) || [];
@@ -142,12 +143,16 @@ function clearInputs() {
 
 function searchEvents() {
     const query = document.getElementById('searchInput').value.toLowerCase();
-    const events = JSON.parse(localStorage.getItem('events')) || [];
-    const completedEvents = JSON.parse(localStorage.getItem('completedEvents')) || [];
-    const eventsList = document.getElementById('eventsList');
+    let events = JSON.parse(localStorage.getItem('events')) || [];
+    let completedEvents = JSON.parse(localStorage.getItem('completedEvents')) || [];
+    let allEvents = events.concat(completedEvents);
+    let eventsList = document.getElementById('eventsList');
     eventsList.innerHTML = '';
 
-    const filteredEvents = events.concat(completedEvents).filter(event => {
+    // Filter out deleted events
+    allEvents = allEvents.filter(event => !event.deleted);
+
+    const filteredEvents = allEvents.filter(event => {
         return event.name.toLowerCase().includes(query) ||
                event.speaker.toLowerCase().includes(query) ||
                event.email.toLowerCase().includes(query) ||
@@ -163,6 +168,8 @@ function searchEvents() {
     document.getElementById('eventsContainer').style.display = 'block';
     document.getElementById('inputContainer').style.display = 'none';
 }
+
+
 
 function updateEventCounts() {
     const events = JSON.parse(localStorage.getItem('events')) || [];
